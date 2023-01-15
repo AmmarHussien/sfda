@@ -1,24 +1,38 @@
 package org.example;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
+import java.util.concurrent.TimeUnit;
 
 public class homePageBack {
-    WebDriver driver;
-    public homePageBack(WebDriver driver){
-        this.driver = driver;
+    static WebDriver driver2;
+
+    public homePageBack(WebDriver driver2) {
+        homePageBack.driver2 = driver2;
     }
-//    public loginPage clickFormAuthentication() {
-//        clickXpath("//*[@id=\"toolbar-lg\"]/mat-toolbar-row[1]/ul/li[2]");
-//        return new loginPage(driver);
-//    }
-//
-//    public createTask1 CreateEventButton(){
-//        clickXpath("/html/body/app-root/div/div/div[2]/app-service-catalog/div/app-page/div/div/div/div/div/mat-drawer-container/mat-drawer-content/div[2]/div/div[1]/app-service-card[8]");
-//        clickXpath("/html/body/app-root/div/div/div[2]/app-service-details/div/app-page/div/div/div/div/div[1]/div[2]/button");
-//        return new createTask1(driver);
-//    }
-//    public  void clickXpath(String Xpath){
-//        driver.findElement(By.xpath(Xpath)).click();
-//    }
+
+    public loginPageBack OpenBackOffice() {
+        WebDriverManager.chromedriver().setup();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("incognito");
+        driver2 = new ChromeDriver(options);
+        driver2.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        goBackoffice();
+        return new loginPageBack(driver2);
+    }
+    public static void goBackoffice(){
+        driver2.get("https://www.sfda-clinicaltrials.org/backoffice");
+    }
+
+    public createTaskInBack CreateTaskButton(){
+        clickXpath("/html/body/app-root/app-layout/div/main/section/app-dashboard/div/div/div[3]/app-tasks-dashlet-table/div/div/div[2]/mat-table/mat-row[1]");
+       return new createTaskInBack(driver2);
+    }
+    public  void clickXpath(String Xpath){
+        driver2.findElement(By.xpath(Xpath)).click();
+    }
 }

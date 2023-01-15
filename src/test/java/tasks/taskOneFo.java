@@ -2,7 +2,9 @@ package tasks;
 
 import base.mainSetup;
 import org.example.createTask1;
+import org.example.createTaskInBack;
 import org.example.loginPage;
+import org.example.loginPageBack;
 import org.testng.annotations.Test;
 
 public class taskOneFo extends mainSetup {
@@ -19,9 +21,19 @@ public class taskOneFo extends mainSetup {
         createTask1.setDescription("tesstt");
         createTask1.setDescriptionTwo("tewsst");
         createTask1.setDescriptionFour("yes");
-        homePageFo.setUpBackOffice();
         //createTask1.uploadFile("/Users/ammarhussien/Downloads/ETEC.pdf");
-//        createTask1.setSubmit();
+        createTask1.setSubmit();
+        loginPageBack loginPageBack =  homePageBack.OpenBackOffice();
+        loginPageBack.setUserName("supervisor1");
+        loginPageBack.setPassword("supervisor1");
+        loginPageBack.clickLoginButton();
+        createTaskInBack createTaskInBack = homePageBack.CreateTaskButton();
+        createTaskInBack.ClickAssignToMeButton();
+        createTaskInBack.setConfirm();
+        createTaskInBack.setDescription("Hello dslksdjkds dskljdslkjsdlkjds dslkjsdlkjsdlkjsdlk");
+        createTaskInBack.setAccept();
+        createTaskInBack.setSendAndSave();
+        createTaskInBack.setConfirmTask();
     }
 
 }

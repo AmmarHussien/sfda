@@ -2,11 +2,12 @@ package org.example;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-public class loginPage {
-    private final WebDriver driver;
 
-    public loginPage(WebDriver driver){
-        this.driver = driver;
+public class loginPageBack {
+    static WebDriver driver;
+
+    public loginPageBack(WebDriver driver) {
+        loginPageBack.driver = driver;
     }
 
     private final By userNameField = By.id("username");
@@ -22,5 +23,6 @@ public class loginPage {
     public void clickLoginButton() {
         driver.findElement(loginButton).click();
     }
+
 
 }
