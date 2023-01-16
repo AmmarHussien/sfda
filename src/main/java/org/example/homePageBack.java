@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-import java.util.concurrent.TimeUnit;
+import java.time.Duration;
 
 public class homePageBack {
     static WebDriver driver2;
@@ -20,7 +20,7 @@ public class homePageBack {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("incognito");
         driver2 = new ChromeDriver(options);
-        driver2.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        driver2.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
         goBackoffice();
         return new loginPageBack(driver2);
     }
@@ -28,8 +28,9 @@ public class homePageBack {
         driver2.get("https://www.sfda-clinicaltrials.org/backoffice");
     }
 
+    // /html/body/app-root/app-layout/div/main/section/app-dashboard/div/div/div[3]/app-tasks-dashlet-table/div/div/div[2]/mat-table/mat-row[2]/mat-cell[2]/ion-text/text()
     public createTaskInBack CreateTaskButton(){
-        clickXpath("/html/body/app-root/app-layout/div/main/section/app-dashboard/div/div/div[3]/app-tasks-dashlet-table/div/div/div[2]/mat-table/mat-row[1]");
+        clickXpath("/html/body/app-root/app-layout/div/main/section/app-dashboard/div/div/div[3]/app-tasks-dashlet-table/div/div/div[2]/mat-table/mat-row[1]/mat-cell[2]/ion-text");
        return new createTaskInBack(driver2);
     }
     public  void clickXpath(String Xpath){

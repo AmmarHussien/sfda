@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 
-import java.util.concurrent.TimeUnit;
+import java.time.Duration;
 
 public class mainSetup {
     WebDriver driver;
@@ -21,7 +21,7 @@ public class mainSetup {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
 
     @BeforeMethod
@@ -30,7 +30,4 @@ public class mainSetup {
        homePageBack = new homePageBack(driver);
         driver.get("https://www.sfda-clinicaltrials.org/");
     }
-
-
-
 }

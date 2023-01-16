@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f72915d2-3aae-432d-802f-0378daba6300" name="Changes" comment="Sfda Test">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/createTaskInBack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/loginPageBack.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/homePageBack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/homePageBack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/homePageFo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/homePageFo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/loginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/loginPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/base/mainSetup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/base/mainSetup.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tasks/taskOneFo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tasks/taskOneFo.java" afterDir="false" />
     </list>
@@ -56,7 +52,8 @@
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RunManager" selected="TestNG.taskOneFo">
@@ -151,8 +148,8 @@
       <list>
         <item itemvalue="TestNG.taskOneFo" />
         <item itemvalue="TestNG.taskOneFo.chooseTaskOne" />
-        <item itemvalue="TestNG.SuccessfulLogin" />
         <item itemvalue="TestNG.SuccessfulLogin.testSuccessfulLogin" />
+        <item itemvalue="TestNG.SuccessfulLogin" />
         <item itemvalue="TestNG.mainSetup" />
       </list>
     </recent_temporary>
@@ -167,7 +164,10 @@
       <updated>1673426486177</updated>
       <workItem from="1673426487361" duration="28287000" />
       <workItem from="1673775969280" duration="9580000" />
-      <workItem from="1673786275058" duration="2340000" />
+      <workItem from="1673786275058" duration="3727000" />
+      <workItem from="1673790536489" duration="1126000" />
+      <workItem from="1673862953033" duration="3105000" />
+      <workItem from="1673866449463" duration="414000" />
     </task>
     <task id="LOCAL-00001" summary="Sfda Test">
       <created>1673558611579</created>
@@ -176,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673558611579</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Sfda Test">
+      <created>1673788749744</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1673788749744</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
